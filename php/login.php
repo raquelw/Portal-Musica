@@ -9,10 +9,10 @@
 		$myusername = trim($_REQUEST['email']);
 		$mypassword =trim($_REQUEST['password']);			
 		
-		$result = mysqli_query($db,"SELECT CustomerId FROM customer WHERE Email = '".$myusername."' and LastName = '".$mypassword."';");			
-		echo "este antes rows";
+		$result = mysqli_query($db,"SELECT CustomerId FROM Customer WHERE Email = '".$myusername."' and LastName = '".$mypassword."';");			
+		
 		if(mysqli_num_rows($result) == 1){
-		echo "entra?";
+		
 			$row = mysqli_fetch_array($result, MYSQLI_ASSOC);	
 			session_start();
 			$_SESSION['login_user'] = $row['CustomerId'];
@@ -61,6 +61,7 @@
 	<body>
 		<h1 align="center">PORTAL DE MUSICA</h1>
 	<center>
+		
 		<form  action="" method="post" name="formulario">
 			<fieldset>
 				<legend>Inicio de sesión</legend>
