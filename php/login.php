@@ -10,7 +10,7 @@
 		$mypassword =trim($_REQUEST['password']);			
 		
 		$result = mysqli_query($db,"SELECT CustomerId FROM customer WHERE Email = '".$myusername."' and LastName = '".$mypassword."';");			
-	
+		echo "este antes rows";
 		if(mysqli_num_rows($result) == 1){
 		echo "entra?";
 			$row = mysqli_fetch_array($result, MYSQLI_ASSOC);	
