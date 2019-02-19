@@ -1,7 +1,7 @@
 <?php	
 
 	function configuracion(){	
-		define('DB_SERVER', '10.129.14.132');
+		define('DB_SERVER', '10.129.21.90');
 		define('DB_USERNAME', 'root');
 		define('DB_PASSWORD', 'rootroot');
 		define('DB_DATABASE', 'musica');
